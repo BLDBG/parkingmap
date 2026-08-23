@@ -52,22 +52,27 @@
 
                 const parkingPopupTemplate = {
                     title: "{Garage_Ramp}",
+
                     content: [
+                        {
+                            type: "text",
+                            text: `
+                                <div style="font-size: 18px; text-align: center; margin-bottom: 12px;">
+                                    <strong>{Availability}</strong><br>
+                                    <span>Parking Spaces Available</span>
+                                </div>
+                                `
+                        },
                         {
                             type: "fields",
                             fieldInfos: [
                                 {
                                     fieldName: "Region",
                                     label: "Region"
-                                },
-                                {
-                                    fieldName: "Availability",
-                                    label: "Parking Spaces Available"
                                 }
                             ]
                         }
-                    ]
-                };
+                ]};
 
                 // Add the locate widget to the top left corner of the view
                 view.ui.add(locateBtn, {
