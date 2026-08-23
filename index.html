@@ -50,6 +50,25 @@
                     view: view
                 });
 
+                const parkingPopupTemplate = {
+                    title: "{Garage_Ramp}",
+                    content: [
+                        {
+                            type: "fields",
+                            fieldInfos: [
+                                {
+                                    fieldName: "Region",
+                                    label: "Region"
+                                },
+                                {
+                                    fieldName: "Availability",
+                                    label: "Parking Spaces Available"
+                                }
+                            ]
+                        }
+                    ]
+                };
+
                 // Add the locate widget to the top left corner of the view
                 view.ui.add(locateBtn, {
                     position: "bottom-left"
@@ -73,7 +92,8 @@
                     // URL to the service 
                     url: "https://services.arcgis.com/HRPe58bUyBqyyiCt/arcgis/rest/services/survey123_21ca45db92d94905b59b6ed36aa73194_results/FeatureServer",
                     renderer: parkingRenderer,
-                    outFields: ["*"]
+                    outFields: ["*"],
+                    popupTemplate: parkingPopupTemplate
                 });
 
                 // Add the feature layer to the map
