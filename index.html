@@ -47,6 +47,21 @@
                 const locateBtn = new Locate({
                     view: view
                 });
+
+                const parkingRenderer = {
+                    type: "simple",
+                    symbol: {
+                        type: "picture-marker",
+                        url: "https://BLDBG.github.io/parkingmap/parking_sign.png",
+                        width: 24,
+                        height: 24,
+                        outline: {
+                            color: [0, 0, 0],
+                            width: 1
+                        }
+                }};
+
+
                 const parkingLayer = new FeatureLayer({ 
                     // URL to the service 
                     url: "https://services.arcgis.com/HRPe58bUyBqyyiCt/arcgis/rest/services/survey123_21ca45db92d94905b59b6ed36aa73194_results/FeatureServer" 
