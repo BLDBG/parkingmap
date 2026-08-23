@@ -32,14 +32,14 @@
                 esriConfig.apiKey = "AAPTanQncLZrZf5ur6pM-ljzNxg..i-VpfICarg1tjz10faxck-Zge3EjZ7zUUP6cbX081l71ELCp9bpgqiXurYSbhs0fDmOXMQXAyGeiHz6r66t7EHfdRLO-CHh0jjakX3bxMaWeDs_FW1ECWOu3cH9p_uFnmikXqwfxpBtMbKtKduCMoKi4NsJLd979B2jQuh6qA8C7XL6pc-Zsj47-Mbr-jDGLgR_QEzkw_Qgpi8Q4oJ-Tc-g8-3Y2Q9sE_mfixuiuCYkRfvXy_LtaeqpybeLD6TZomJ_jjRIL7QE.AT1_ZP956a50";
                 
                 const map = new Map({
-                    basemap: "satellite"
+                    basemap: "streets-vector" // Basemap layer service
                 });
 
                 const view = new MapView({
                     container: "viewDiv", // Reference to the DOM node that will contain the view
                     map: map, // References the map object
                     center: [-89.4073, 43.0723], // Longitude, latitude format
-                    zoom: 10, // Zoom scale level
+                    zoom: 13, // Zoom scale level
                 });
 
          });
